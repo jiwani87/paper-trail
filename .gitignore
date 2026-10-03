@@ -1,0 +1,9 @@
+# Outputs of a run: each user makes their own
+issue-trace.md
+issues.html
+text/
+# The party you act for is asked on first run
+run/ACTING-FOR.txt
+# Python and macOS clutter
+__pycache__/
+.DS_Store
