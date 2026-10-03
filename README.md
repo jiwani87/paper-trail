@@ -25,7 +25,7 @@ On macOS:
 
 ```
 brew install poppler
-brew install tesseract && pip3 install pillow   # optional, scanned PDFs only
+brew install tesseract pillow   # optional, scanned PDFs only
 ```
 
 Tested on macOS.
