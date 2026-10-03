@@ -14,19 +14,26 @@ quoted words are really there.
 This repository ships a worked example: an invented HDD and cable project with 60 dummy daily
 reports, a dummy subcontract and a dummy programme. Every party, figure and date in it is made up.
 
-## What you need
+## Before you start
 
-- [Claude Code](https://claude.com/claude-code)
-- Python 3 (no packages needed for the main path)
-- poppler, for `pdftotext`
-- Only for scanned PDFs with no text layer: tesseract and Pillow
+1. **Homebrew**, the Mac package installer. If `brew --version` fails in Terminal, install it from [brew.sh](https://brew.sh).
+2. **git**. If `git --version` fails, run `xcode-select --install`.
+3. **Claude Code**, with a Claude Pro, Max, Team, Enterprise or Console account. The free claude.ai
+   plan does not include Claude Code. Install it with:
 
-On macOS:
+   ```
+   curl -fsSL https://claude.ai/install.sh | bash
+   ```
 
-```
-brew install poppler
-brew install tesseract pillow   # optional, scanned PDFs only
-```
+   Open a new Terminal window, run `claude`, and log in when the browser opens.
+   Full instructions: [Claude Code setup](https://code.claude.com/docs/en/setup).
+4. **Python 3**, already on most Macs. Check with `python3 --version`.
+5. **poppler**, for reading PDFs:
+
+   ```
+   brew install poppler
+   brew install tesseract pillow   # optional, scanned PDFs only
+   ```
 
 Tested on macOS.
 
@@ -43,6 +50,9 @@ Then say:
 ```
 trace the DPRs in run/
 ```
+
+Claude asks your permission before it runs each command (text extraction, the page build, the check).
+Approve them. The skill reads `run/` and writes its outputs into this folder.
 
 It first asks which party you act for, using the names in the contract, and saves your answer to
 `run/ACTING-FOR.txt`. Then it reads the contract, the programme and every report, and writes:
